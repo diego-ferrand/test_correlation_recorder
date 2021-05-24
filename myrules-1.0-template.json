@@ -1,0 +1,2662 @@
+{
+    "id": "myrules",
+    "description": "1.0",
+    "version": "1.0",
+    "components": "com.blazemeter.jmeter.correlation.siebel.SiebelCounterCorrelationReplacement",
+    "responseFilters": "text/html",
+    "rules": [
+        {
+            "referenceName": "AutoDetect_AribaBuyer1",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "aws=(.+?)&",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_AribaBuyer2",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "aws(.+?)",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_AribaBuyer3",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "USERNAME(.+?)End Of String",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_AribaBuyer4",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "PASSWORD(.+?)End Of String",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_AribaBuyer5",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "awr=(.+?)End Of String",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_AribaBuyer6",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "awr(.+?)",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_AribaBuyer7",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "grandChildNode(.+?)&",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AwrRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "var AWResponseId = '(.+?)';",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AwcharsetRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "input value=\"(.+?)\" type=\"hidden\" name=\"awcharset\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "PageRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "AWActionPopupEnabled=true;\" name=\"(.+?)\" awname=\"PAGE\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "UserNameRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "name=\"(.+?)\" awname=\"USERNAME\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "PasswordRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "name=\"(.+?)\" awname=\"PASSWORD\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AwsnfRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "value=\"(.+?)\" type=\"hidden\" name=\"awsnf\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "LoginRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "value=\"(.+?)\" type=\"hidden\" name=\"awsn\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "SSOLinkRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "top.location.href = '(.+?)'",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "LogoutRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "aw03('(.+?)',null,null,null,event);\" style=\"text-decoration:none;\" awname=\"logout\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "TopOffsetRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "type=\"text\" value=\"#\" name=\"(.+?)\" awname=\"topOffset\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "TopIndexRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "name=\"(.+?)\" awname=\"topIndex\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "IsMaximizedRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "type=\"text\" value=\"false\" name=\"(.+?)\" awname=\"isMaximized\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "SwooshCreateRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "null,null,event);\" id=\"(.+?)\" tabIndex=\"0\" onClick=\"return aw04(this,null,null,null,null,event);\" href=\"#\" title=\"Create\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "HomeButton",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "href=\"#\" onClick=\"return aw03('(.+?),null,null,null,event);\" style=\"text-decoration:none;\" awname=\"home\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "CatalogHideAll",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "tabindex=\"1000\" onMouseDown=\"return awmenuClicked(this,'(.+?)');\" awname=\"MenuItemHideAll",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "GoNextStepRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "null,null,null,event);\" id=\"(.+?)title=\"Go to the next step",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AddThisItemRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "null,null,null,event);\" id=\"(.+?)title=\"Add this item",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "FinishAddingItemsRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": ",null,event);\" id=\"(.+?));\" title=\"Finish adding items\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AddItemToRequestRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "null,null,null,event);\" id=\"(.+?);\" title=\"Add item to request\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "CatalogLinkRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "return aw03('(.+?)',null,null,null,event);\" awname=\"Catalogs\">",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "MatchAllRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "value=\"\" name=\"(.+?)\" awname=\"matchall\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "MenuItemFavoritesPrefix",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "name=\"(.+?)\" awname=\"MenuItemFavoritesPrefix\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "MoreOptionsMenuRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "awmenuLinkOnClick(null,'moreOptionsMenu','(.+?)',event)",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "MenuItemHideAll1Rule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "(this,'(.+?)','_^^^');\" awname=\"MenuItemHideAll\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "MenuItemHideAll2Rule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "(this,'(.+?)','_^^');\" awname=\"MenuItemHideAll\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "ResetButtonRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "onKeyPress=\"return aw05(this,null,null,null,null,event);\" id=\"(.+?)\" tabIndex=\"#\" onClick=\"return aw04(this,null,null,null,null,event);\" title=\"Reset search\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "RequisitionRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "onClick=\"return aw03('(.+?)',null,null,null,event);\" awname=\"Procure\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "RequesterRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "onMouseDown=\"AWActionPopupEnabled=true;\" name=\"(.+?)\" awname=\"Requester\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "HoldTillDateRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "name=\"(.+?)\" awname=\"HoldTillDate\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "QuantityRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "name=\"(.+?)\" awname=\"Quantity\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "ShipToRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "name=\"(.+?)\" awname=\"ShipTo\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "DeliverToRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "name=\"(.+?)\" awname=\"DeliverTo\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "NeedByRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "name=\"(.+?)\" awname=\"NeedBy\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "TextRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "name=\"(.+?)\" awname=\"Text\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "ApprovalTabRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": ",'(.+?)',null,event);\" class=\"noLine\"><span class=\"tabText\">Approval Flow",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "CommodityCodeRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "name=\"(.+?)\" awname=\"CommodityExportMapEntry\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "SelectOtherRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "id=\"(.+?)\" value=\"awaction\">Other",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "BillingAddressRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "name=\"(.+?)\" awname=\"BillingAddress\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "CostCenterRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "name=\"(.+?)\" awname=\"CostCenter\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AccountRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "name=\"(.+?)\" awname=\"Account\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "SubAccountRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "name=\"(.+?)\" awname=\"SubAccount\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "ProductRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "name=\"(.+?)\" awname=\"Product\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "RegionRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "name=\"(.+?)\" awname=\"Region\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "CompanyRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "name=\"(.+?)\" awname=\"Company\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "NameRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "name=\"(.+?)\" awname=\"Name\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "DetailsSelectViewRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "onMouseDown=\"AWActionPopupEnabled=true;\" name=\"(.+?)\" awname=\"detailsSelectView",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "ViewByTypesRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "onMouseDown=\"AWActionPopupEnabled=true;\" name=\"(.+?)\" awname=\"viewByTypes\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "PageSizesRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "onMouseDown=\"AWActionPopupEnabled=true;\" name=\"(.+?)\" awname=\"pageSizes\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "Requisition2Rule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "href=\"#\" onClick=\"return aw03('(.+?)',null,null,null,event);\" awname=\"ariba.purchasing.core.Requisition\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "DescriptionRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": " cols=\"##\" rows=\"#\" name=\"(.+?)\" awname=\"Description.Description\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "InvCommonCommodityDescriptionRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "class=\"invalidF\" name=\"(.+?)\" awname=\"Description.CommonCommodityCode\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "SupplierRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "\"return aw02(this, event);\" onMouseDown=\"AWActionPopupEnabled=true;\" name=\"(.+?)\" awname=\"Supplier\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "SupplierPartNumberRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "value=\"\" maxlength=\"###\" name=\"(.+?)\" awname=\"Description.SupplierPartNumber\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "SupplierPartAuxiliaryIDRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "maxlength=\"###\" name=\"(.+?)\" awname=\"Description.SupplierPartAuxiliaryID\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "UnitOfMeasureRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "onChange=\"return aw02(this, event);\" onMouseDown=\"AWActionPopupEnabled=true;\" name=\"(.+?)\" awname=\"Description.UnitOfMeasure\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "PriceRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "name=\"(.+?)\" awname=\"Description.Price\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "InvCommonCommodityRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "onMouseDown=\"AWActionPopupEnabled=true;\" class=\"invalidF\" name=\"(.+?)\" awname=\"CommodityCode\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "CommonCommodityCodeRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "onMouseDown=\"AWActionPopupEnabled=true;\" name=\"(.+?)\" awname=\"CommodityCode\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "ExpenseReportRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "onClick=\"return aw03('(.+?)',null,null,null,event);\" awname=\"Expense\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "CreateExpenseReportRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "onClick=\"return aw03('(.+?)',null,null,null,event);\" awname=\"CreateER\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "CashAdvanceRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "name=\"(.+?)\" awname=\"CashAdvance\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "CreateExpenseMenuRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "this,'CreateExpenseMenuId','(.+?)',event",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "ExpenseTypeRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "name=\"(.+?)\" awname=\"ExpenseType\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AmountRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "name=\"(.+?)\" awname=\"Amount\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "CityRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "name=\"(.+?)\" awname=\"City\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "PurposeRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "name=\"(.+?)\" awname=\"Purpose\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "VendorRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "name=\"(.+?)\" awname=\"Vendor\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "DateRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "name=\"(.+?)\" awname=\"Date\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "LineItemCheckBoxRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "checked name=\"(.+?)\" awname=\"table_displayGroup_currentSelectedState",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "ExpenseReportLinkRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "onClick=\"return aw03('(.+?)',null,null,null,event);\" awname=\"newTravelAndExpense\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "CreateNewERRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "tabindex=\"1000\" onMouseDown=\"return awmenuClicked(this,'(.+?)');\" awname=\"CreateNew\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "ERDescriptionRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "maxlength=\"255\" name=\"(.+?)\" awname=\"Description\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "EROriginatingCityRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "maxlength=\"255\" name=\"(.+?)\" awname=\"OriginatingCity\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "ERDestinationCityRule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "maxlength=\"255\" name=\"(.+?)\" awname=\"DestinationCity\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "FORM_EVENTTARGET",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "__EVENTTARGET(.+?)",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "FORM_VIEWSTATE",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "__VIEWSTATE(.+?)",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "FORM_EVENTVALIDATION",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "__EVENTVALIDATION(.+?)",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "FORM_EVENTARGUMENT",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "__EVENTARGUMENT(.+?)",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "WebResource.axd",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "WebResource.axd?d=(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "ScriptResource.axd",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "ScriptResource.axd?d=(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "__VIEWSTATE",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "__VIEWSTATE\" value=\"(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "__EVENTVALIDATION",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "__EVENTVALIDATION\" value=\"(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "__EVENTTARGET",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "__EVENTTARGET\" value=\"(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "__EVENTARGUMENT",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "__EVENTARGUMENT\" value=\"(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "|__VIEWSTATE|",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "|hiddenField|__VIEWSTATE|(.+?)|",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "|__EVENTVALIDATION|",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "|hiddenField|__EVENTVALIDATION|(.+?)|",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_BlueMartini1",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "bmUID=(.+?)&",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_BlueMartini2",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "bmFormID(.+?)",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_BlueMartini3",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "bmUID(.+?)",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_BroadVision1",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "BV_SessionID=(.+?)&",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_BroadVision2",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "BV_EngineID=(.+?)&",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_BroadVision3",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "BV_SessionID(.+?)",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_BroadVision4",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "BV_EngineID(.+?)",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "SessionToken",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "SessionToken\" value=\"(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "Session_Token",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "Session_Token\" value=\"(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "CsrfToken",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "CsrfToken=(.+?);",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "DSID",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "//string[contains(text(),'DSId')]/following::string[contains(text(),'-')](.+?)",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "JSID",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "//string[contains(text(),';jsessionid=')](.+?)",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "RTMP/RTMPT ID",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "//string[@name='id' and contains(text(),'-')]/text()(.+?)",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "ReactJSApp",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "start_k=(.+)(.+?)",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "JSessionID",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "JSESSIONID=\"(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "JSession_ID",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "J_SESSIONID=\"(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "PHPSession",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "PHPSESSID=(.+?);",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_Interstage1",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "JSESSIONID=(.+?);",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_Interstage2",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "JSESSIONID(.+?)",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_NetDynamics1",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "SPIDERSESSION=(.+?)&",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_NetDynamics2",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "SPIDERSESSION(.+?)",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "_afrLoop",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "\"_afrLoop\",\\ \"(.*?)\"\\)(.+?)",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "_adfCtrlState",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "_adf.ctrl-state=(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "viewState",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "name=\"javax\\.faces\\.ViewState\"\\ value=\"(.*?)\"(.+?)",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "afrWindowId",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "AdfPage.PAGE.__handleCachedPageForNewWindow('(.+?)')",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "_afrLoop2",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "_afrLoop=(.*?)&(.+?)",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "_adfCtrlState2",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "_adf\\.ctrl-state=(.*?)\\r\\n(.+?)",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_OracleApp1",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "JSESSIONID=(.+?);",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_OracleApp2",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "JServSessionIdroot=(.+?);",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_OracleApp3",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "{!!(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_OracleApp4",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "OracleApps.RF?F=(.+?)'",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_OracleApp5",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "&transactionid=(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_OracleApp6",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "portal30_sso=(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_OracleApp7",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "portal30=(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_OracleApp8",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "NAME=\"j\" VALUE=\"(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_OracleApp9",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "hr_general_utilities.DEXL?i=(.+?)'",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_OracleApp10",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "&sessionid=(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_OracleApp11",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "&sessionid=(.+?)&",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_OracleApp12",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "crmperf14_v1159(.+?); domain=.us.oracle.com",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_OracleApp13",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "REPORT_NUMBER:0\" title=\"W(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_OracleApp14",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "ItemKey:'(.+?)'})",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_OracleApp15",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "<INPUT TYPE='hidden' NAME='POR_REQ_SESSION_ID' VALUE='(.+?)'>",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_OracleApp16",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "<INPUT TYPE='hidden' NAME='POR_REQ_LINE_ID' VALUE='(.+?)'>",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_OracleApp17",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "<INPUT TYPE='hidden' NAME='POR_REQ_HEADER_ID' VALUE='(.+?)'>",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "CI",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "&CI=(.+?)\";",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "GI_1",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "\"GI_1\" VALUE=\"(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "GI_0",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "\"GI_0\" VALUE=\"(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "token",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "[CDATA[(.+?)]]></token>",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "Rep_Token",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "session=(.+?);",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "WA_sid",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "sid=(.+?)&",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "Hash1",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "\"PageHash\" value=\"(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "Hash2",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "&PageHash=(.+?)\\u0027",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "file",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "&fileName=(.+?).jpg",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "jsessionid",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "jsessionid=(.+?);",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "p1",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "p1=(.+?)&",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "GI_2",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "\"GI_2\" VALUE=\"(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "fileId",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "fileId=(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "Encrypted Parameter",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "{!!(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "FunctionID",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "OracleApps.RF?F=(.+?)'",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "TransactionID",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "&transactionid=(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "Rule_1",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "portal30_sso=(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "portal30",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "portal30=(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "Rule_2",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "NAME=\"j\" VALUE=\"(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "Rule_3",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "hr_general_utilities.DEXL?i=(.+?)'",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "sessionid",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "&sessionid=(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "Rule_4",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "crmperf14_v1159(.+?); domain=.us.oracle.com",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "Rule_6",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "REPORT_NUMBER:0\" title=\"W(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "Item_Id1",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "ItemKey:'(.+?)'})",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "reqid",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "<INPUT TYPE='hidden' NAME='POR_REQ_SESSION_ID' VALUE='(.+?)'>",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "reqline_id",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "<INPUT TYPE='hidden' NAME='POR_REQ_LINE_ID' VALUE='(.+?)'>",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "reqheader_id",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "<INPUT TYPE='hidden' NAME='POR_REQ_HEADER_ID' VALUE='(.+?)'>",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "sessionId1",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "&sessionid=(.+?)&",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "icx",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "icx_ticket='.(.+?)'",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "referer",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "href=\"(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "_AM_TX_ID_FIELD",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "_AM_TX_ID_FIELD(.+?)",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "Accessibility",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "=\"Accessibility\"><option selected value=\"(.+?)\">None</option>",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "_FORM",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "_FORM(.+?)",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "SubmitButton$$unvalidated",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "SubmitButton$$unvalidated(.+?)",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "SubmitButton$$serverUnvalidated",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "SubmitButton$$serverUnvalidated(.+?)",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "SubmitButton$$processFormDataCalled",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "SubmitButton$$processFormDataCalled(.+?)",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "Cancel$$unvalidated",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "Cancel$$unvalidated(.+?)",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "Cancel$$processFormDataCalled",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "Cancel$$processFormDataCalled(.+?)",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "Cancel$$serverUnvalidated",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "Cancel$$serverUnvalidated(.+?)",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "FORM_MAC_LIST",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "FORM_MAC_LIST(.+?)",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "FormSubmitButton",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "onclick=\"submitForm('DefaultFormName',1,{'_FORM_SUBMIT_BUTTON':'(.+?)'})",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "oas",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": ";oas=(.+?)')",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "gv15",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "gv15=(.+?)&",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "icx_ticket",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "icx_ticket='(.+?)'",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "oas2",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "oas=(.+?)<",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "oas3",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "oas=(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "jsessionid",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": ";jsessionid=(.+?)End Of Page",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "transactionid",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "&_ti=(.+?)&",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "params",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "params=(.+?)&",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "ICSID_Rule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "id='ICSID' value='(.+?)'",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "sessionID_Rule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "sessionId=(.+?)End Of String",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "ICStateNum_Rule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "ICStateNum(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "TaskExplorer_Rule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "TaskExplorer_(.+?)&",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "jsessionid_Rule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "jsessionid=(.+?)?",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "jdemafjascacheUID_Rule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "jdemafjascacheUID=(.+?)&",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "jdemafjasUID_Rule",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "jdemafjasUID=(.+?)&",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_Siebel1",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "_sn=(.+?);",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_Siebel2",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "_sn=(.+?)&",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_Siebel3",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "row.id = (.+?)];",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_Siebel4",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "`ValueArray`(.+?)`",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_Siebel5",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "`v`(.+?)`",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_Siebel6",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "SWEBMC=(.+?)&",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_Siebel7",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "ViewState\" value=\"(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_Siebel8",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "sid=\"(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_Siebel9",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "row.id = \"(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_Siebel10",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "*1-(.+?)`",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_Siebel11",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": ",'1-(.+?)'",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_Siebel12",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "ShowViewLayout((.+?));",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_Siebel13",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "&SWEACn=(.+?)&",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_Siebel14",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "`cks`(.+?)`",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "Application_Count",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "SWEACn=(.+?)&",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "Browser_ID_1",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "navigator.id = (.+?);",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "Browser_ID_2",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "navigator.id = \"(.+?)\";",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "View_Layout_Cache_7.7_2",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "^cks^(.+?)^",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "View_Layout_Cache_7.7_3",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "~cks~(.+?)~",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "View_Layout_Cache_7.7_4",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "[cks[(.+?)[",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "Form_ID_1",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "`SWEFI`(.+?)`",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "Form_ID_2",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "^SWEFI^(.+?)^",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "Form_ID_3",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "~SWEFI~(.+?)~",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "Form_ID_4",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "[SWEFI[(.+?)[",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "Browser_Retry_Seq",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "name=\"SWEBRS\" value=\"(.+?)\"",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "Siebel_SRN",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "SRN=(.+?)&",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_SilverJRunner1",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "downloads/(.+?)?",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        },
+        {
+            "referenceName": "AutoDetect_SilverJRunner2",
+            "correlationExtractor": {
+                "type": "com.blazemeter.jmeter.correlation.core.extractors.RegexCorrelationExtractor",
+                "regex": "downloads/(.+?)/",
+                "matchNr": 1
+            },
+            "correlationReplacement": {
+                "type": "com.blazemeter.jmeter.correlation.core.replacements.RegexCorrelationReplacement",
+                "regex": ""
+            }
+        }
+    ],
+    "repositoryId": "local"
+}
